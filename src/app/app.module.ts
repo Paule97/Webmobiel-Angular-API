@@ -21,9 +21,8 @@ import { ReactiveFormsModule} from '@angular/forms';
 
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { NewsService } from './services/news.service';
-import {ApiService} from './services/api.service';
 import {SourcesComponent} from './sources/sources.component';
-import {MainService} from './services/main.service';
+import {HeadlinesnewsService} from './services/headlinesnews.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +44,7 @@ import {MainService} from './services/main.service';
     HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [NewsService, ApiService, MainService, HttpClient],
+  providers: [NewsService, HeadlinesnewsService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
